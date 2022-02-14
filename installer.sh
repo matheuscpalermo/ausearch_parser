@@ -31,4 +31,4 @@ sudo mv /usr/local/bin/ausearch_parser/audit.rules /etc/audit/rules.d/audit.rule
 echo "LOGS_PATH = './log_files/ausearch-i.txt'" > /usr/local/bin/ausearch_parser/config.py
 
 ## scheduling script
-sudo echo '15 * * * * root /usr/local/bin/ausearch_parser/script.sh' > /etc/crontab
+sudo echo '15 * * * * root /usr/local/bin/ausearch_parser/script.sh' >> /etc/crontab
