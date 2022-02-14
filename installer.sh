@@ -1,6 +1,7 @@
 #!/bin/sh
 
-## Granting permissions
+## creating log_file directory and granting permissions
+sudo mkdir /usr/local/bin/ausearch_parser/log_file
 sudo chmod 750 /usr/local/bin/ausearch_parser/log_file
 sudo chmod 750 /usr/local/bin/ausearch_parser/script.sh
 sudo chmod 750 /usr/local/bin/ausearch_parser/ausearch_parser.py
