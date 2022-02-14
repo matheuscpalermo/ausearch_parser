@@ -1,6 +1,6 @@
 #!/bin/sh
 
-## creating log_file directory and granting permissions
+## creating log_file folder and granting permissions
 sudo mkdir /usr/local/bin/ausearch_parser/log_file
 sudo chmod 750 /usr/local/bin/ausearch_parser/log_file
 sudo chmod 750 /usr/local/bin/ausearch_parser/script.sh
@@ -22,11 +22,11 @@ sudo update-grub
 
 ## replace auditd.conf
 sudo mv /etc/audit/auditd.conf /etc/audit/original_conf.txt
-sudo mv /usr/local/bin/ausearch_parser/auditd.conf /etc/audit/auditd.conf
+sudo mv /usr/local/bin/ausearch_parser/auditd_files/uditd.conf /etc/audit/auditd.conf
 
 ## replace auditd.rules
 sudo mv /etc/audit/rules.d/audit.rules /etc/audit/rules.d/original_rules.txt
-sudo mv /usr/local/bin/ausearch_parser/audit.rules /etc/audit/rules.d/audit.rules
+sudo mv /usr/local/bin/ausearch_parser/auditd_files/audit.rules /etc/audit/rules.d/audit.rules
 sudo service auditd restart
 
 ## create config file
