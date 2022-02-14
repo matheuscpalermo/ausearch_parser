@@ -26,6 +26,7 @@ sudo mv /usr/local/bin/ausearch_parser/auditd.conf /etc/audit/auditd.conf
 ## replace auditd.rules
 sudo mv /etc/audit/rules.d/audit.rules /etc/audit/rules.d/original_rules.txt
 sudo mv /usr/local/bin/ausearch_parser/audit.rules /etc/audit/rules.d/audit.rules
+sudo service auditd restart
 
 ## create config file
 echo "LOGS_PATH = './log_files/ausearch-i.txt'" > /usr/local/bin/ausearch_parser/config.py
