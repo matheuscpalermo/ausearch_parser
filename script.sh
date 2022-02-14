@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 ausearch -i --checkpoint ./log_files/checkpoint > ./log_files/ausearch-i.txt;
 
