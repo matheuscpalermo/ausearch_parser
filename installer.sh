@@ -1,5 +1,10 @@
 #!/bin/sh
 
+## Granting permissions
+sudo chmod 750 /usr/local/bin/ausearch_parser/log_file
+sudo chmod 750 /usr/local/bin/ausearch_parser/script.sh
+sudo chmod 750 /usr/local/bin/ausearch_parser/ausearch_parser.py
+
 ## install auditd
 sudo apt install auditd
 
