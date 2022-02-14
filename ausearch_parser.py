@@ -21,8 +21,7 @@ def rawLogToJson(rawLog):
     rawLogLines = rawLog.split('\n')
     logDict['timestamp'] = rawLogLines[0].split('msg=audit(')[1].split('.')[0]
     logDict['id'] = rawLogLines[0].split(':')[3].split(')')[0]
-    logDict['type'] = rawLogLines[-1].split('=')[1].split(' ')[0]
-    
+    logDict['type'] = rawLogLines[-1].split('=')[1].split()[0]
     for line in rawLogLines:
         line = line.strip('\' ')
         if 'type=PATH' in line or 'type=CWD' in line or 'type=EXECVE' in line :
@@ -48,7 +47,9 @@ def main():
     # Divide the text into a list of logs
     logList=fullText.split("\n----\n")
 
-    logList[0] = logList[0].strip('-\n')
+    logList[0] = logList[0].strip('----\n')
+    logList[-1] = logList[-1].rstrip('\n')
+    
 
     parsedLogList = []
 
@@ -59,7 +60,7 @@ def main():
 
     # Prints the results
     print(parsedLogList)
-
+    
 
 if __name__ == "__main__":
     main()
