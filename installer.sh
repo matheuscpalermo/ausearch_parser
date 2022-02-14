@@ -22,7 +22,7 @@ sudo update-grub
 
 ## replace auditd.conf
 sudo mv /etc/audit/auditd.conf /etc/audit/original_conf.txt
-sudo mv /usr/local/bin/ausearch_parser/auditd_files/uditd.conf /etc/audit/auditd.conf
+sudo mv /usr/local/bin/ausearch_parser/auditd_files/auditd.conf /etc/audit/auditd.conf
 
 ## replace auditd.rules
 sudo mv /etc/audit/rules.d/audit.rules /etc/audit/rules.d/original_rules.txt
