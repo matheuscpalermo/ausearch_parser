@@ -1,10 +1,10 @@
 #!/bin/sh
 
 ## creating log_file folder and granting permissions
-sudo mkdir /usr/local/bin/ausearch_parser/log_file
-sudo chmod 750 /usr/local/bin/ausearch_parser/log_file
-sudo chmod 750 /usr/local/bin/ausearch_parser/script.sh
-sudo chmod 750 /usr/local/bin/ausearch_parser/ausearch_parser.py
+mkdir /usr/local/bin/ausearch_parser/log_file
+sudo chmod 755 /usr/local/bin/ausearch_parser/log_file
+sudo chmod 760 /usr/local/bin/ausearch_parser/script.sh
+sudo chmod 760 /usr/local/bin/ausearch_parser/ausearch_parser.py
 
 ## install auditd
 sudo apt install auditd -y
