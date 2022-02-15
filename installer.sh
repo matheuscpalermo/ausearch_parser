@@ -33,4 +33,4 @@ sudo service auditd restart
 echo "LOGS_PATH = '/usr/local/bin/ausearch_parser/log_file/ausearch-i.txt'" > /usr/local/bin/ausearch_parser/config.py
 
 ## scheduling script
-sudo echo '15 * * * * root /usr/local/bin/ausearch_parser/script.sh' >> /etc/crontab
+sudo echo '15 * * * * root sudo /usr/local/bin/ausearch_parser/script.sh' >> /etc/crontab
