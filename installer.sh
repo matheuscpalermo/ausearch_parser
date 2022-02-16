@@ -21,10 +21,12 @@ echo 'GRUB_CMDLINE_LINUX="audit_backlog_limit=8192"' >> /etc/default/grub
 update-grub
 
 ## replace auditd.conf
+sudo chown -R root:root /usr/local/bin/ausearch_parser/auditd_files/auditd.conf
 mv /etc/audit/auditd.conf /etc/audit/original_conf.txt
 mv /usr/local/bin/ausearch_parser/auditd_files/auditd.conf /etc/audit/auditd.conf
 
 ## replace auditd.rules
+sudo chown -R root:root /usr/local/bin/ausearch_parser/auditd_files/audit.rules
 mv /etc/audit/rules.d/audit.rules /etc/audit/rules.d/original_rules.txt
 mv /usr/local/bin/ausearch_parser/auditd_files/audit.rules /etc/audit/rules.d/audit.rules
 service auditd restart
